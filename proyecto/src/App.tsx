@@ -21,7 +21,7 @@ function App() {
         </Link>
 
         <Link to="/original">
-          <p>Original</p>
+          <p>Mas Populares</p>
         </Link>
 
         <Link to="/informativa">
