@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./style.css";
-
+// ola esto es para que me deje hacer commit push
 function Original() {
   type Anime = {
   mal_id: number;
