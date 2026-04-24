@@ -115,3 +115,13 @@ button:hover {
   outline: 2px solid #7c5cff;
   border-radius: 8px;
 }
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: "anime.png";
+  background: url("anime.png") center/cover no-repeat;
+  filter: blur(10px);
+  transform: scale(1.1); 
+  z-index: -1;
+}
