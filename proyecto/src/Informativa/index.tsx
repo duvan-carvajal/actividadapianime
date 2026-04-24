@@ -11,6 +11,9 @@ function Informativa() {
       <br />
       <p>Editado y Adaptado por Duvan Samuel Carvajal Pontón</p>
       <br />
+
+      <p id="whisper">no pude colocar la imagen de fondo :c</p>
+      <br />
     </div>
   );
 }
