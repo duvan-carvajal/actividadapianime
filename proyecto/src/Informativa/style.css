@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("anime.png") center/cover no-repeat;
+  filter: blur(10px);
+  transform: scale(1.1); 
+  z-index: -1;
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+}

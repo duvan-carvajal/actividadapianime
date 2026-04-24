@@ -11,6 +11,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
+      <br></br>
       <nav className="c-menu">
         <Link to="/">
           <p>Home</p>

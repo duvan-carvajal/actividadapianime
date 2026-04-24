@@ -1,18 +1,19 @@
-import  "./style.css";
-function Informativa() {
+import "./style.css";
 
+function Informativa() {
   return (
-    <>
-      <h1>Sobre la pagina</h1>
-      <br></br>
+    <div className="container">
+      <h1>AnimeApi</h1>
+      <h2>Informacion sobre los animes mas populares del momento</h2>
+      <br />
       <p>Codigo mayormente reutilizado de https://github.com/sdtibata/liga-react</p>
-      <br></br>
+      <br />
       <p>Api obtenida de https://api.jikan.moe/v4/top/anime</p>
-      <br></br>
+      <br />
       <p>Editado y Adaptado por Duvan Samuel Carvajal Pontón</p>
-      <br></br>
-    </>
-  )
+      <br />
+    </div>
+  );
 }
 
-export default Informativa
+export default Informativa;
