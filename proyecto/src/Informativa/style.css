@@ -2,13 +2,12 @@
   position: relative;
   overflow: hidden;
 }
-body{
-    background-image: "anime.png";
-}
+
 .container::before {
   content: "";
   position: absolute;
   inset: 0;
+  background-image: "anime.png";
   background: url("anime.png") center/cover no-repeat;
   filter: blur(10px);
   transform: scale(1.1); 
