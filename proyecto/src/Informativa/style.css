@@ -2,7 +2,9 @@
   position: relative;
   overflow: hidden;
 }
-
+body{
+    background-image: "anime.png";
+}
 .container::before {
   content: "";
   position: absolute;

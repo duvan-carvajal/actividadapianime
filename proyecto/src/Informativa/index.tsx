@@ -1,5 +1,4 @@
 import "./style.css";
-
 function Informativa() {
   return (
     <div className="container">
