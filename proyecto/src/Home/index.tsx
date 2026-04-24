@@ -33,7 +33,6 @@ function Home() {
     fetchData();
   }, []);
 
-  // 🔍 filtro por nombre
   const animesFiltrados = animes.filter((anime) =>
     busqueda.length < 3
       ? true
@@ -44,7 +43,7 @@ function Home() {
     <>
       <input
         type="text"
-        placeholder="Buscar anime..."
+        placeholder="Buscar anime"
         value={busqueda}
         onChange={(e) => setBusqueda(e.target.value)}
       />
@@ -71,8 +70,8 @@ function Home() {
                 <h3>{anime.title}</h3>
               </Link>
 
-              <p>⭐ {anime.score}</p>
-              <p>🎬 {anime.episodes} eps</p>
+              <p>Puntuacion: {anime.score}</p>
+              <p>Episodios: {anime.episodes} eps</p>
             </div>
           ))}
         </div>
