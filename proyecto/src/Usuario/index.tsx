@@ -1,11 +1,12 @@
-import  "./style.css";
-function Usuario() {
+import { auth } from '../firebase/firebaseConfig';
+
+export default function Usuario() {
+  const user = auth.currentUser;
 
   return (
-    <>
-      <p>Usuario</p>
-    </>
-  )
+    <div>
+      <h1>Usuario</h1>
+      <p>{user?.email}</p>
+    </div>
+  );
 }
-
-export default Usuario
