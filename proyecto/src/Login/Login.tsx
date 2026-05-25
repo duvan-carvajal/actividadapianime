@@ -6,8 +6,16 @@ export default function Login() {
   const [correo, setCorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
 
+  const [success, setSuccess] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const user = auth.currentUser;
+
   const login = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    setSuccess('');
+    setErrorMsg('');
 
     try {
       await signInWithEmailAndPassword(
@@ -16,15 +24,38 @@ export default function Login() {
         contrasena
       );
 
-      alert('Sesión iniciada');
+      setSuccess(' Sesión iniciada correctamente');
     } catch (error: any) {
-      alert(error.message);
+      setErrorMsg(' Correo o contraseña incorrectos');
     }
   };
+
+  if (user) {
+    return (
+      <div>
+        <h1>Login</h1>
+        <p style={{ color: 'green' }}>
+           Ya has iniciado sesión como {user.email}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={login}>
       <h1>Login</h1>
+
+      {success && (
+        <p style={{ color: 'green', fontWeight: 'bold' }}>
+          {success}
+        </p>
+      )}
+
+      {errorMsg && (
+        <p style={{ color: 'red', fontWeight: 'bold' }}>
+          {errorMsg}
+        </p>
+      )}
 
       <input
         type="email"
@@ -33,6 +64,8 @@ export default function Login() {
         onChange={(e) => setCorreo(e.target.value)}
       />
 
+      <br /><br />
+
       <input
         type="password"
         placeholder="Contraseña"
@@ -40,7 +73,11 @@ export default function Login() {
         onChange={(e) => setContrasena(e.target.value)}
       />
 
-      <button type="submit">Iniciar sesión</button>
+      <br /><br />
+
+      <button type="submit">
+        Iniciar sesión
+      </button>
     </form>
   );
 }
